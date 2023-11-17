@@ -7,4 +7,4 @@ Diese Repo beinhaltet eine SQL Datei mit Dummy-Daten, die in eine MYSql datenban
 
 Das Schema der Datenbank richtet sich nach folgendem Er-Diagramm:
 
-![ER-Diagramm](/assets/images/Er-Diagramm.jpg)
+![ER-Diagramm](/assets/images/ER-Diagramm.jpg)
