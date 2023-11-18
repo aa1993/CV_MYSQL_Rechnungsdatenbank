@@ -202,7 +202,7 @@ mysql> select p.Produktname from Produkt as p inner join kauft as ka on p.Artike
 | Wasser        |
 +---------------+
 ```
-1. Liste aller Kunden und mit ihren Gesamtausgaben:
+2. Liste aller Kunden und mit ihren Gesamtausgaben:
 ```
 mysql> select concat(k.Nachname,', ',k.Vorname) as 'Nachname, Vorname', round(sum(p.Preis * ka.Anzahl),2) as Gesamtausgaben from Produkt as p inner join kauft as ka inner join Kunde as k inner join Rechnung as r on p.Artikelnummer=ka.Artikelnummer and k.Kundennummer=ka.Kundennummer and r.Rechnungsnummer=ka.Rechnungsnummer Group by ka.Kundennummer;
 +------------------------+----------------+
@@ -217,7 +217,7 @@ mysql> select concat(k.Nachname,', ',k.Vorname) as 'Nachname, Vorname', round(su
 +------------------------+----------------+
 
 ```
-1. Liste aller Rechnungen mit Kundenname, Rechnungsdatum und Gesamtpreis:
+3. Liste aller Rechnungen mit Kundenname, Rechnungsdatum und Gesamtpreis:
 ```
 mysql> select r.Rechnungsnummer, concat(MAX(k.Nachname),', ',MAX(k.Vorname)) as 'Nachname, Vorname', r.Rechnungsdatum, round(sum(p.Preis * ka.Anzahl),2) as Gesamtpreis from Produkt as p inner join kauft as ka inner join Kunde as k inner join Rechnung as r on p.Artikelnummer=ka.Artikelnummer and k.Kundennummer=ka.Kundennummer and r.Rechnungsnummer=ka.Rechnungsnummer Group by ka.Rechnungsnummer;
 +-----------------+------------------------+----------------+-------------+
@@ -236,7 +236,7 @@ mysql> select r.Rechnungsnummer, concat(MAX(k.Nachname),', ',MAX(k.Vorname)) as 
 |              11 | Theiss, Brigitte       | 2023-10-30     |       34.17 |
 +-----------------+------------------------+----------------+-------------+
 ```
-1. Liste aller Artikel mit Gesamteinnahmen absteigend sortiert:
+4. Liste aller Artikel mit Gesamteinnahmen absteigend sortiert:
 
 ```
 mysql> select p.Produktname, round(sum(p.Preis * ka.Anzahl),2) as Gesamteinnahmen from Produkt as p inner join kauft as ka on p.Artikelnummer=ka.Artikelnummer Group by p.Artikelnummer Order by Gesamteinnahmen DESC;
@@ -267,7 +267,7 @@ mysql> select p.Produktname, round(sum(p.Preis * ka.Anzahl),2) as Gesamteinnahme
 | Heft           |            0.78 |
 +----------------+-----------------+
 ```
-1. Liste aller Artikel mit Verkaufsanzahl absteigend sortiert:
+5. Liste aller Artikel mit Verkaufsanzahl absteigend sortiert:
 
 ```
 mysql> select p.Produktname, sum(ka.Anzahl) as Gesamteinnahmen from Produkt as p inner join kauft as ka on p.Artikelnummer=ka.Artikelnummer Group by p.Artikelnummer Order by Gesamteinnahmen;
