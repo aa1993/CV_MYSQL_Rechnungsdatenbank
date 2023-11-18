@@ -14,7 +14,7 @@ Das Schema der Datenbank richtet sich nach folgendem Er-Diagramm:
 Die Inhalte der Datenbank sind folgende:
 
 ### Kunde
-'''
+```
 mysql> select * from Kunde;
 +--------------+-----------+-------------+------------------------+------------+-------+-------+
 | Kundennummer | Vorname   | Nachname    | Strasse                | Hausnummer | PLZ   | Ort   |
@@ -26,10 +26,10 @@ mysql> select * from Kunde;
 |            5 | Daniela   | Beich       | Sigwinstr.             |        158 | 51061 | Köln  |
 |            6 | Stefan    | Hahn        | Wilhelm-Schreiber-Str. |         46 | 50827 | Köln  |
 +--------------+-----------+-------------+------------------------+------------+-------+-------+
-'''
+```
 
 ### Produkt
-'''
+```
 mysql> select * from Produkt;
 +---------------+----------------+-------+
 | Artikelnummer | Produktname    | Preis |
@@ -57,10 +57,10 @@ mysql> select * from Produkt;
 |            21 | Kugelschreiber |  1.99 |
 |            22 | Heft           |  0.26 |
 +---------------+----------------+-------+
-'''
+```
 
 ### Rechnung
-'''
+```
 mysql> select * from Produkt;
 +---------------+----------------+-------+
 | Artikelnummer | Produktname    | Preis |
@@ -88,10 +88,10 @@ mysql> select * from Produkt;
 |            21 | Kugelschreiber |  1.99 |
 |            22 | Heft           |  0.26 |
 +---------------+----------------+-------+
-'''
+```
 
 ### kauft
-'''
+```
 mysql> select * from kauft;
 +--------------+-----------------+---------------+--------+
 | Kundennummer | Rechnungsnummer | Artikelnummer | Anzahl |
@@ -169,4 +169,4 @@ mysql> select * from kauft;
 |            6 |               4 |             9 |      2 |
 |            6 |               4 |            15 |      3 |
 +--------------+-----------------+---------------+--------+
-'''
+```
