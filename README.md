@@ -1,9 +1,12 @@
 # Rechnungsdatenbank
-## Inhalt und Grund
+## Kontext
+### Inhalt und Grund
 
-Diese Repo beinhaltet eine SQL Datei mit Dummy-Daten, die in eine MYSql datenbank einfach importiert werden können. Diese Repo soll meine Kenntnisse in SQL und MYSQL demonstrieren. Außerdem werde ich diese Dummydatenbank in Zukunft für andere Projekte benutzten.
+Diese Repo beinhaltet eine SQL Datei mit Dummy-Daten, die in eine MySQL datenbank einfach importiert werden können. Diese Repo soll meine Kenntnisse in SQL und MySQL demonstrieren. Außerdem werde ich diese Dummydatenbank in Zukunft für andere Projekte benutzten.
 
-## ER-Diagramm
+Die Datenbank beinhaltet Daten über Rechnungen mit zugehörigen Kunden und die jeweiligen Produkt die gekauft wurden.
+
+### ER-Diagramm
 
 Das Schema der Datenbank richtet sich nach folgendem Er-Diagramm:
 
